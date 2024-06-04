@@ -173,15 +173,81 @@
 
 // console.log(letters);
 
-// indexOf e lastIndexOf
-const myElements = ["morango", "maça", "abacate", "maça"];
+// // indexOf e lastIndexOf
+// const myElements = ["morango", "maça", "abacate", "maça"];
 
-console.log(myElements.indexOf("maça"));
-console.log(myElements.indexOf("abacate")); // retorna o indice do elemento no array
+// console.log(myElements.indexOf("maça"));
+// console.log(myElements.indexOf("abacate")); // retorna o indice do elemento no array
 
-console.log(myElements.lastIndexOf("maça")); // retorna o ultimo índice que um certo elemento pode ser encontrado no array
+// console.log(myElements.lastIndexOf("maça")); // retorna o ultimo índice que um certo elemento pode ser encontrado no array
 
-console.log(myElements.indexOf("mamão")); // se o elemento não existir no array, ele retorna -1
+// console.log(myElements.indexOf("mamão")); // se o elemento não existir no array, ele retorna -1
 
-console.log(myElements.lastIndexOf("mamão")); // se o elemento não existir no array, ele retorna -1
+// console.log(myElements.lastIndexOf("mamão")); // se o elemento não existir no array, ele retorna -1
 
+// // slice
+
+// const testeSlice = [
+//     "a",
+//     "b",
+//     "c", 
+//     "d",
+//     "e",
+//     "f",
+// ]
+
+// const subArray = testeSlice.slice(2, 4); //é um array interno ou método de string que retorna uma cópia rasa de uma parte de um array em um novo objeto array, onde 'start' e 'end' são os índices do array.
+
+// console.log(subArray);
+
+// console.log(testeSlice);
+
+// const subArray2 = testeSlice.slice(2, 4 + 1);
+
+// console.log(subArray2);
+
+// const subArray3 = testeSlice.slice(10, 20); // se esses indices não existirem no array, ele retorna um array vazio
+
+// console.log(subArray3);
+
+// const subArray4 = testeSlice.slice(2); // dessa forma eu seleciono apenas a parte start do slice, ou seja, ele vai retornar os indices apartir do indice 2 e trazer todos a seguir, se por a caso o array tiver 100 elementos, ele retornará do 2 em diante
+
+// console.log(subArray4);
+
+// // foreach
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// nums.forEach((numero) => {
+//     console.log(`o numero é ${numero}`);
+// });
+
+// const post = [
+//     {title: "Primeiro post", category: "PHP"},
+//     {title: "Segundo Post", category: "PHP"}
+// ]
+
+// post.forEach((post) => {
+//     console.log(`exibindo post: ${post.title} da categoria ${post.category}`);
+// });
+
+// includes
+
+const brands = [
+    "bmw",
+    "fiat",
+    "toyota"
+]
+
+console.log(brands.includes("fiat")); //é uma maneira simples e eficiente de verificar se uma array contém um determinado valor em JavaScript
+
+if(brands.includes("fiat")){
+    console.log("existe");
+} else {
+    console.log("não existe");
+}
+
+// reverse - ele inverte os elementos de um array, e ele modifica o array original
+const reverseTest = [1, 2, 3, 4, 5]
+
+console.log(reverseTest.reverse());
+console.log(reverseTest);
