@@ -324,4 +324,4 @@
 
 // console.log(somaInfinita2(1, 2, 3, 50, 100, 200));
 
-//
+// destructuring em objetos é uma funcionabilidade que nos permite desestrutrar algum dado, no caso dos objetos é possivel criar variaveis a partir das suas propriedades, com uma simples sintaxe
