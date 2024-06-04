@@ -324,4 +324,18 @@
 
 // console.log(somaInfinita2(1, 2, 3, 50, 100, 200));
 
-// destructuring em objetos é uma funcionabilidade que nos permite desestrutrar algum dado, no caso dos objetos é possivel criar variaveis a partir das suas propriedades, com uma simples sintaxe
+// destructuring em objetos 
+const userDetails = {
+    fName: "Lucas",
+    lName: "Gabriel",
+    job: "Programador",
+}
+const {fName, lName, job} = userDetails //é uma funcionabilidade que nos permite desestrutrar algum dado, no caso dos objetos é possivel criar variaveis a partir das suas propriedades, com uma simples sintaxe
+
+console.log(fName, lName, job);
+
+// renomear variaveis
+const {fName: primeiroNome, asd} = userDetails;
+console.log(primeiroNome);
+
+// destructurin com arrays
