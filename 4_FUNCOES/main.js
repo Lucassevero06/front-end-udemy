@@ -95,3 +95,19 @@
 // greeting();
 
 // greeting('Lucas');
+
+// Argumentos com valor default
+const customGreeting = (name, greet = "Olá") => {
+    return `${greet}, ${name}`;
+};
+
+console.log(customGreeting("Lucas"));
+console.log(customGreeting("Lucas", "Salve papito")); 
+
+const repeatText = (text, repeat = 2) => {
+    for (let i = 0; i < repeat; i++) {
+        console.log(text);
+    };
+};
+
+repeatText("Testando", 5);
