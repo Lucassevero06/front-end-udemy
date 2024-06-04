@@ -230,24 +230,98 @@
 //     console.log(`exibindo post: ${post.title} da categoria ${post.category}`);
 // });
 
-// includes
+// // includes
 
-const brands = [
-    "bmw",
-    "fiat",
-    "toyota"
-]
+// const brands = [
+//     "bmw",
+//     "fiat",
+//     "toyota"
+// ]
 
-console.log(brands.includes("fiat")); //é uma maneira simples e eficiente de verificar se uma array contém um determinado valor em JavaScript
+// console.log(brands.includes("fiat")); //é uma maneira simples e eficiente de verificar se uma array contém um determinado valor em JavaScript
 
-if(brands.includes("fiat")){
-    console.log("existe");
-} else {
-    console.log("não existe");
-}
+// if(brands.includes("fiat")){
+//     console.log("existe");
+// } else {
+//     console.log("não existe");
+// }
 
-// reverse - ele inverte os elementos de um array, e ele modifica o array original
-const reverseTest = [1, 2, 3, 4, 5]
+// // reverse - ele inverte os elementos de um array, e ele modifica o array original
+// const reverseTest = [1, 2, 3, 4, 5]
 
-console.log(reverseTest.reverse());
-console.log(reverseTest);
+// console.log(reverseTest.reverse());
+// console.log(reverseTest);
+
+// // trim 
+// const trimTeste = "  testando\n   ";
+// console.log(trimTeste);
+// console.log(trimTeste.trim()); //ele remove tudo que não é texto em uma string, ele não modifica o texto original
+
+// console.log(trimTeste.length);
+// console.log(trimTeste.trim().length);
+
+// // padStart 
+// const testePadStart = "1";
+
+// const newNumber = testePadStart.padStart(4, "0"); //insere um texto no começo da string, pode ser repetido de acordo com o primeiro argumento ele insere o segundo argumento ao metodo
+
+// console.log(testePadStart);
+// console.log(newNumber);
+
+// const testePadEnd = newNumber.padEnd(10, "0"); //preenche a string original com um determinado caractere, ou conjunto de caraceres, (repetidamente, se necessário) para que a string resultante alcance um determinado comprimento
+
+// console.log(testePadEnd);
+
+// // split 
+// const frase = "O rato roeu a roupa do rei de roma";
+
+// const arrayDaFrase = frase.split(" "); //divide uma string em um array, cada elemento será determinado por um separador em comum, os mais utilizados são: ponto e virgula, virgula, espaço
+// console.log(arrayDaFrase); 
+
+// // join 
+// const fraseDeNovo = arrayDaFrase.join(" "); //une um array em uma string, podemos colocar um separador também, para formatar a string
+// console.log(fraseDeNovo);
+
+// const itensParaComprar = [
+//     "mouse",
+//     "monitor",
+//     "cadeira"
+// ];
+
+// const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`;
+// console.log(fraseDeCompra);
+
+// // repeat 
+// const palavra = "testando ";
+
+// console.log(palavra.repeat(5)); //repete um texto n vezes, onde n é o numero de vezes que colocamos como seu argumento
+
+// // Rest Operator ou Rest Parameters 
+// const somaInfinita = (...args) => { //é caracterizado pelo simbolo ..., podemos utiliza-lo para receber indefinidos argumentos em uma função, assim não precisamos declarar exatamente o que vamos receber, deixando a função mais ampla
+//     let total = 0;
+
+//     for (let i = 0; args.length > i; i++) {
+//         total += args[i];
+//     }
+
+//     return total;
+// };
+
+// console.log(somaInfinita(1, 2, 3, 50, 100, 200)); // deixa a função sem limite de parametros
+
+// // for of é uma estrutura de repetições semelhante ao for, porém mais simples, o numero de repetições é baseado no array utilizado, podemos nos referir aos elementos sem precisar acessar o indice deles
+// const somaInfinita2 = (...args)=>{
+
+
+//     let total = 0;
+
+//     for (num of args) {
+//         total += num;
+//     }
+
+//     return total;
+// };
+
+// console.log(somaInfinita2(1, 2, 3, 50, 100, 200));
+
+//
