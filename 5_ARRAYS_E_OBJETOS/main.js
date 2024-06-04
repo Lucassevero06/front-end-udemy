@@ -35,3 +35,19 @@ console.log(numbers);
 
 const myName = "Lucas";
 console.log(myName.length);
+
+//Metodos 
+const otherNumbers = [1, 2, 3];
+
+const allNumbers = numbers.concat(otherNumbers); //concatena arrays
+
+console.log(allNumbers);
+
+const text = "ALgum texto";
+
+console.log(text.toUpperCase()); //deixa todo o texto em caixa alta
+
+console.log(typeof text.toUpperCase);
+
+console.log(text.indexOf("g")); // indica o indice da string "g" dentro do array text
+
