@@ -339,3 +339,10 @@ const {fName: primeiroNome, asd} = userDetails;
 console.log(primeiroNome);
 
 // destructurin com arrays
+const myList = [
+    "Avião", "Submarino", "Carro"
+]
+
+const [veiculaoA, veiculoB, veiculoC] = myList;
+
+console.log(veiculaoA, veiculoB, veiculoC);
