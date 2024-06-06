@@ -346,3 +346,14 @@ const myList = [
 const [veiculaoA, veiculoB, veiculoC] = myList;
 
 console.log(veiculaoA, veiculoB, veiculoC);
+
+// JSON 
+const myJSon = '{"name": "Lucas", "age": 31}'
+
+console.log(myJSon);
+
+// JSON para objeto e objeto para JSON
+const myObject = JSON.parse(myJSon); //transformando em json
+console.log(myObject);
+
+console.log(myObject.name);
