@@ -66,5 +66,23 @@ function criarCachorro(nome, raca) {
     return cachorro;
 }
 
-const hulk = criarCachorro("Hulk", "Pinscher");
+let hulk = criarCachorro("Hulk", "Pinscher");
 console.log(hulk);
+
+// funcções como classe
+
+function Cachorro(nome, raca) {
+    this.nome = nome;
+    this.raca = raca;
+}
+
+let dog1 = new Cachorro("Hulk", "Pinscher");
+
+console.log(dog1);
+
+//metodos na funcção construtora
+Cachorro.prototype.uivar = () => {
+    console.log("au au");
+}
+
+dog1.uivar();
