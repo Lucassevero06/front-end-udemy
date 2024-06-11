@@ -39,28 +39,48 @@
 // })
 // .catch((err) => console.log(`um erro ocorreu: ${err}`))
 
-// rejeitando promisses
-function checkNumber(n) {
-    return new Promise((resolve, reject) => {
+// // rejeitando promisses
+// function checkNumber(n) {
+//     return new Promise((resolve, reject) => {
 
-        if(n > 10) {
-            resolve(`numero maior que 10`)
-        } else {
-            reject(new Error("Numero muito baixo"))
-        }
+//         if(n > 10) {
+//             resolve(`numero maior que 10`)
+//         } else {
+//             reject(new Error("Numero muito baixo"))
+//         }
 
-    })
-}
+//     })
+// }
 
-const a = checkNumber(20)
+// const a = checkNumber(20)
 
-const b = checkNumber(10)
+// const b = checkNumber(10)
 
-a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => 
-    console.log(`O error que ocorreu é: ${err}`)
-);
+// a.then((v) => console.log(`O resultado é ${v}`)).catch((err) => 
+//     console.log(`O error que ocorreu é: ${err}`)
+// );
 
-b.then((v) => console.log(`O resultado é ${v}`)).catch((err) =>
-  console.log(`O error que ocorreu é: ${err}`)
-);
+// b.then((v) => console.log(`O resultado é ${v}`)).catch((err) =>
+//   console.log(`O error que ocorreu é: ${err}`)
+// );
 
+// // resolvendo varias promises
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(10)
+//     }, 3000)
+// })
+
+// const p2 = Promise.resolve(10 + 10);
+
+// const p3 = new Promise((resolve, reject) => {
+//     if(30 > 10) {
+//         resolve(30)
+//     } else {
+//         reject("Erro")
+//     }
+// })
+
+// Promise.all([p1, p2, p3]).then((values) => console.log(values))
+
+// // async functions
