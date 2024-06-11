@@ -102,17 +102,102 @@
 // console.log(Object.getPrototypeOf(dog2));
 
 // // mais sobre Classes
-class Caminhao {
-    constructor(eixos, cor) {
-        this.eixos = eixos;
-        this.cor = cor;
-    }
+// class Caminhao {
+//     constructor(eixos, cor) {
+//         this.eixos = eixos;
+//         this.cor = cor;
+//     }
 
-    descreverCaminhao() {
-        console.log(`Este Caminhão tem ${this.eixos} eixos, e é da cor ${this.cor}`);
-    }
-}
+//     descreverCaminhao() {
+//         console.log(`Este Caminhão tem ${this.eixos} eixos, e é da cor ${this.cor}`);
+//     }
+// }
 
-const scania = new Caminhao(6, "Vermelho");
-console.log(scania);
-scania.descreverCaminhao();
+// const scania = new Caminhao(6, "Vermelho");
+// console.log(scania);
+// scania.descreverCaminhao();
+
+// // Override nas propriedades via Prototype
+// class Humano {
+//     constructor(nome, idade) {
+//         this.nome = nome;
+//         this.idade = idade;
+//     };
+// };
+
+// const lucas = new Humano("Lucas Gabriel", 18);
+
+// console.log(lucas);
+// console.log(Humano.prototype.idade);
+
+// Humano.prototype.idade = "Não é definida";
+
+// console.log(lucas.idade);
+// console.log(Humano.prototype.idade);
+
+// // Symbols em classes
+// class Aviao {
+//     constructor(marca, turbinas) {
+//         this.marca = marca;
+//         this.turbinas = turbinas;
+//     };
+// };
+
+// const asas = Symbol();
+// const pilotos = Symbol();
+
+// Aviao.prototype[pilotos] = 3;
+// Aviao.prototype[asas] = 2;
+
+
+// const boeing = new Aviao("Boeing", 10);
+// console.log(boeing);
+// console.log(boeing[asas]);
+// console.log(boeing[pilotos]);
+
+// // Getters e Setters
+// class Post {
+//     constructor(titulo, descricao, tags) {
+//         this.titulo = titulo;
+//         this.descricao = descricao;
+//         this.tags = tags;
+//     }
+
+//     get exibirTitulo() {
+//         return `Voce está lendo: ${this.titulo}`;
+//     }
+
+//     set adicionarTags(tags) {
+//         const tagsArrays = tags.split(", ");
+//         this.tags = tagsArrays;
+//     }
+// }
+
+// const myPost = new Post("Titulo post", "jdsbhifgbisgbusfgbiuguig", "#sla #sla2");
+// console.log(myPost);
+
+// console.log(myPost.exibirTitulo);
+
+// myPost.adicionarTags = "Programacao, javascript, json";
+
+// console.log(myPost.tags);
+
+// // Herança de classes
+// class Mamifero {
+//     constructor(patas) {
+//         this.patas = patas;
+//     }
+// }
+
+// class Lobo extends Mamifero {
+//     constructor(patas, nome) {
+//         super(patas, patas); //essa propriedade é herdada da classe pai
+//         this.nome = nome;
+//     }
+// }
+
+// const lobo = new Lobo(4, "lobinho")
+// console.log(lobo);
+
+// // instanceOf
+// console.log(lobo instanceof Lobo);
