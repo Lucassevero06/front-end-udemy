@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     background-image: url(../img/pexels-kevin-ku-92347-577585.jpg);
     /* background-image: linear-gradient(to top, blue, purple); */
