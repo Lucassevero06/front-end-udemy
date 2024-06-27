@@ -5,7 +5,12 @@ import city from './assets/city.jpg'
 
 // 3 - hook
 import Data from './components/Data'
+
+// 4 - renderização de lista
 import ListRender from './components/ListRender'
+
+// 7 - renderização condicional
+import ConditionalRender from './components/ConditionalRender'
 
 function App() {
 
@@ -20,6 +25,8 @@ function App() {
       <Data/>
       {/* 4 - render de lista */}
       <ListRender/>
+      {/* 7 - Renderização condicional */}
+      <ConditionalRender/>
     </div>
   )
 
