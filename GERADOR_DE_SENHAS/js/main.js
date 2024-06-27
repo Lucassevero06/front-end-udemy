@@ -1,7 +1,7 @@
 // Seleção de elementos
 
-const generatePasswordButton = document.querySelector("#generate-password");
-const generatedPasswordElement = document.querySelector("#generated-password");
+const generatePasswordButton = document.querySelector("#open-generate-password");
+const generatedPasswordElement = document.querySelector("#generate-options");
 
 //Funções
 
@@ -22,13 +22,45 @@ getSymbol = () => {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
+const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
+
+    let password = "";
+
+    const passwordLength = 10;
+
+    const generators = [
+        getLetterLowerCase,
+        getLetterUpperCase,
+        getNumber,
+        getSymbol
+    ]
+
+    for(i = 0; i < passwordLength;i = i + 4) {
+        generators.forEach(() => {
+
+            const randomValue = generators[Math.floor(Math.random() * generators.length)]();
+        
+            password += randomValue;
+        })
+    }
+
+    password = password.slice(0, passwordLength);
+    
+    generatedPasswordElement.style.display = "block";
+    generatedPasswordElement.querySelector("h4").innerText = password;
+}
+
 //Eventos
 
 generatePasswordButton.addEventListener("click", () => {
-
+    generatePassword(
+        getLetterLowerCase,
+        getLetterUpperCase,
+        getNumber,
+        getSymbol
+    );
 });
 
-console.log(getLetterLowerCase());
-console.log(getLetterUpperCase());
-console.log(getNumber());
-console.log(getSymbol());
+
+
+
