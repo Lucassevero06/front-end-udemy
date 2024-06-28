@@ -33,8 +33,20 @@ import Fragment from './components/Fragment'
 
 import Container from './components/Container'
 
-//14 - função em prop
+// 14 - função em prop
 import ExecuteFunction from './components/ExecuteFunction'
+
+// 15 - state lift
+import { useState } from 'react'
+import Message from './components/Message'
+import ChangeMessage from './components/ChangeMessage'
+
+// 15 - state lift
+const [message, setMessage] = useState(" ");
+
+const handleMessage = (msg) => {
+  setMessage(msg);
+}
 
 function App() {
 
@@ -83,6 +95,9 @@ function App() {
       </Container>
       {/* 14 - função em prop */}
       <ExecuteFunction myFunction={showMessage}/>
+      {/* 15 - state lift */}
+      <Message msg={message}/>
+      <ChangeMessage handleMessages={handleMessage}/>
     </div>
   )
 
