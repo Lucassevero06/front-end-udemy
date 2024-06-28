@@ -20,6 +20,9 @@ import CarDetails from './components/CarDetails'
 
 // 12 - fragments
 import Fragment from './components/Fragment'
+
+// 13 - Children
+import Container from './components/Container'
 // 11 - renderização de listas com componente
 
 const cars = [
@@ -61,6 +64,13 @@ function App() {
       ))}
       {/* 12 - fragments */}
       <Fragment/>
+      {/* 13 - Children */}
+      <Container>
+        <div>
+          <h2>Teste</h2>
+          <p>Meu container</p>
+        </div>
+      </Container>
     </div>
   )
 
