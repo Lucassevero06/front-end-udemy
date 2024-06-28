@@ -18,6 +18,16 @@ import ShowUserName from './components/ShowUserName'
 // 9 - Desustruturando Props 
 import CarDetails from './components/CarDetails'
 
+// 12 - fragments
+import Fragment from './components/Fragment'
+// 11 - renderização de listas com componente
+
+const cars = [
+  { id: 1, brand: "Ferrari", color: "Amarelo", km: 0},
+  { id: 2, brand: "KIA", color: "Branco", km: 200000 },
+  { id: 3, brand: "Renault", color: "Azul", km: 32000 },
+]
+
 function App() {
 
   return (
@@ -40,6 +50,17 @@ function App() {
       {/* 10 -reaproveitamento de componentes */}
       <CarDetails brand="Fiat" km={5000} color="Vermelho" />
       <CarDetails brand="Ford" km={10000} color="Azul escuro" />
+      {/* 11 - renderização de lista com componente */}
+      {cars.map((car) => (
+        <CarDetails 
+          key={car.id}
+          brand={car.brand}
+          color={car.color}
+          km={car.km}
+        />
+      ))}
+      {/* 12 - fragments */}
+      <Fragment/>
     </div>
   )
 
