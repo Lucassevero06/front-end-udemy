@@ -18,20 +18,30 @@ import ShowUserName from './components/ShowUserName'
 // 9 - Desustruturando Props 
 import CarDetails from './components/CarDetails'
 
-// 12 - fragments
-import Fragment from './components/Fragment'
-
-// 13 - Children
-import Container from './components/Container'
 // 11 - renderização de listas com componente
 
 const cars = [
-  { id: 1, brand: "Ferrari", color: "Amarelo", km: 0},
+  { id: 1, brand: "Ferrari", color: "Amarelo", km: 0 },
   { id: 2, brand: "KIA", color: "Branco", km: 200000 },
   { id: 3, brand: "Renault", color: "Azul", km: 32000 },
 ]
 
+// 12 - fragments
+import Fragment from './components/Fragment'
+
+// 13 - Children
+
+import Container from './components/Container'
+
+//14 - função em prop
+import ExecuteFunction from './components/ExecuteFunction'
+
 function App() {
+
+  // 14 - função em prop
+  function showMessage() {
+    console.log("Olá");
+  }
 
   return (
     <div className="App" style={{paddingBottom: "500px"}}>
@@ -71,6 +81,8 @@ function App() {
           <p>Meu container</p>
         </div>
       </Container>
+      {/* 14 - função em prop */}
+      <ExecuteFunction myFunction={showMessage}/>
     </div>
   )
 
