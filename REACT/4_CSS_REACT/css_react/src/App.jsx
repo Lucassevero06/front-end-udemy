@@ -7,6 +7,9 @@ function App() {
   //4 - inline style dinamico
   const n = 15;
 
+  // 5 - classes dinamicas
+  const redTitle = true;
+
   return (
     <div className='App'>
       {/* 1 - css Global */}
@@ -25,6 +28,8 @@ function App() {
       <h2 style={n > 20 ? { color: "purple" } : { color: "magenta" }}>
         css dinamico 2
       </h2>
+      {/* 5 - classes dinamicas */}
+      <h2 className={redTitle ? "red-title" : "title"}>Classe dinamica</h2>
     </div>
   )
 }
