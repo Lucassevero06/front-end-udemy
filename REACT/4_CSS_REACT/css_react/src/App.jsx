@@ -3,6 +3,9 @@ import './App.css'
 // 2 - css Componente
 import MyComponent from './components/MyComponent'
 
+// 6 - css module
+import Title from './components/Title';
+
 function App() {
   //4 - inline style dinamico
   const n = 15;
@@ -30,6 +33,8 @@ function App() {
       </h2>
       {/* 5 - classes dinamicas */}
       <h2 className={redTitle ? "red-title" : "title"}>Classe dinamica</h2>
+      {/* 6 - css module */}
+      <Title/>
     </div>
   )
 }
