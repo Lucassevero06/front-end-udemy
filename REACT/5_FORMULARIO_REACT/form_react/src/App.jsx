@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>Form  em react</h1>
-      <MyForm/>
+      <MyForm userName="Lucas gabriel" userEmail="lucasgabriel@gmail"/>
     </div>
   )
 }

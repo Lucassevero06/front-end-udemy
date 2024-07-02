@@ -2,10 +2,10 @@ import "./MyForm.css";
 
 import { useState } from "react";
 
-const MyForm = () => {
+const MyForm = ({userName, userEmail}) => {
     // 3-gerenciamento de dados
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
+    const [name, setName] = useState(userName);
+    const [email, setEmail] = useState(userEmail);
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -16,6 +16,9 @@ const MyForm = () => {
         e.preventDefault();
 
         console.log(name, email);
+
+        //validação
+        //envio
     }
 
     // console.log(name, email);
@@ -27,12 +30,26 @@ const MyForm = () => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Digite o seu nome" onChange={handleName}/>
+                <input type="text"
+                id="name"
+                name="name"
+                placeholder="Digite o seu nome"
+                onChange={handleName}
+                // 6-controlled input
+                value={name || ""}
+                />
             </div>
             {/* 2-label envolvendo input */}
             <label>
                 <span>E-mail:</span>
-                <input type="text" name="email" id="email" placeholder="Digite o seu E-mail" onChange={(e) => setEmail(e.target.value)}/>
+                <input type="text"
+                name="email"
+                id="email"
+                placeholder="Digite o seu E-mail"
+                onChange={(e) => setEmail(e.target.value)}
+                // 6-controlled input
+                value={email || ""}
+                />
             </label>
             <input type="submit" value="Enviar" />
         </form>
