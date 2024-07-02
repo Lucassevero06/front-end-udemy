@@ -2,7 +2,7 @@ import "./MyForm.css";
 
 import { useState } from "react";
 
-const MyForm = ({userName, userEmail}) => {
+function MyForm ({userName, userEmail}) {
     // 3-gerenciamento de dados
     const [name, setName] = useState(userName);
     const [email, setEmail] = useState(userEmail);
@@ -85,6 +85,10 @@ const MyForm = ({userName, userEmail}) => {
         
     </div>
   )
+}
+
+MyForm.propTypes = {
+    firstname: PropTypes.string.isRequired
 }
 
 export default MyForm
