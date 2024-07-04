@@ -46,7 +46,7 @@ const ImcCalc = () => {
                     <div className="form-control">
                         <label htmlFor="weight">Peso:</label>
                         <input type="text" name="weight" id="weight" placeholder="exemplo 90.5" 
-                        onChange={(e) => handleHeightChange(e)}
+                        onChange={(e) => handleWeightChange(e)}
                         value={weight}
                         />
                     </div>
