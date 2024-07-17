@@ -1,15 +1,15 @@
 import React from 'react'
-import ImcCalc from './ImcCalc'
+import './ImcTable.css'
 import Button from './Button'
 
-const ImcTable = ({data}) => {
+const ImcTable = ({data, imc, info, infoClass}) => {
   return (
     <div id='result-container'>
         <p id="imc-number">
-          Seu IMC: 
+          Seu IMC: <span className={infoClass}>{imc}</span>
         </p>
         <p id="imc-info">
-          Situação Atual:
+          Situação Atual: <span className={infoClass}>{info}</span>
         </p>
         <h3>Confira as Classificações:</h3>
         <div className="imc-table">
